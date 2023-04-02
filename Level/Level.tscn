@@ -1,46 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://1rifbs0c40cg"]
+[gd_scene load_steps=7 format=3 uid="uid://1rifbs0c40cg"]
 
-[ext_resource type="Script" path="res://Level/Player.gd" id="1_f32nb"]
 [ext_resource type="Script" path="res://Level/Node3D2.gd" id="2_ydb7m"]
+[ext_resource type="PackedScene" uid="uid://cbf4k7ithghk2" path="res://Level/node_3d_2.tscn" id="3_ooymn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d34d6"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3xj62"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_vnchp"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1qsgx"]
+
 [node name="Level" type="Node3D"]
 
-[node name="Player" type="CharacterBody3D" parent="."]
-script = ExtResource("1_f32nb")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-shape = SubResource("CapsuleShape3D_d34d6")
-
-[node name="Node3D" type="Node3D" parent="Player"]
-
-[node name="Node3D2" type="Node3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
-script = ExtResource("2_ydb7m")
-
-[node name="Node3D3" type="Node3D" parent="Player"]
-
-[node name="Node3D4" type="Node3D" parent="Player"]
-
-[node name="Player2" type="CharacterBody3D" parent="."]
-script = ExtResource("1_f32nb")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player2"]
-shape = SubResource("CapsuleShape3D_d34d6")
-
-[node name="Node3D" type="Node3D" parent="Player2"]
-
-[node name="Node3D2" type="Node3D" parent="Player2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
-script = ExtResource("2_ydb7m")
-
-[node name="Node3D3" type="Node3D" parent="Player2"]
-
-[node name="Node3D4" type="Node3D" parent="Player2"]
-
 [node name="Player3" type="CharacterBody3D" parent="."]
-script = ExtResource("1_f32nb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player3"]
 shape = SubResource("CapsuleShape3D_d34d6")
@@ -54,3 +27,101 @@ script = ExtResource("2_ydb7m")
 [node name="Node3D3" type="Node3D" parent="Player3"]
 
 [node name="Node3D4" type="Node3D" parent="Player3"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player3"]
+mesh = SubResource("CapsuleMesh_3xj62")
+
+[node name="Player6" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.96486)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player6"]
+shape = SubResource("CapsuleShape3D_d34d6")
+
+[node name="Node3D" type="Node3D" parent="Player6"]
+
+[node name="Node3D2" type="Node3D" parent="Player6" instance=ExtResource("3_ooymn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+script = ExtResource("2_ydb7m")
+
+[node name="Node3D3" type="Node3D" parent="Player6"]
+
+[node name="Node3D4" type="Node3D" parent="Player6"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player6"]
+mesh = SubResource("CapsuleMesh_vnchp")
+
+[node name="Player4" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.6427)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player4"]
+shape = SubResource("CapsuleShape3D_d34d6")
+
+[node name="Node3D" type="Node3D" parent="Player4"]
+
+[node name="Node3D2" type="Node3D" parent="Player4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+script = ExtResource("2_ydb7m")
+
+[node name="Node3D3" type="Node3D" parent="Player4"]
+
+[node name="Node3D4" type="Node3D" parent="Player4"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player4"]
+mesh = SubResource("CapsuleMesh_1qsgx")
+
+[node name="Player7" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.840402, -4.76837e-07, -2.98079)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player7"]
+shape = SubResource("CapsuleShape3D_d34d6")
+
+[node name="Node3D" type="Node3D" parent="Player7"]
+
+[node name="Node3D2" type="Node3D" parent="Player7" instance=ExtResource("3_ooymn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+script = ExtResource("2_ydb7m")
+
+[node name="Node3D3" type="Node3D" parent="Player7"]
+
+[node name="Node3D4" type="Node3D" parent="Player7"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player7"]
+mesh = SubResource("CapsuleMesh_vnchp")
+
+[node name="Player2" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59674, 0, -4.62676)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player2"]
+shape = SubResource("CapsuleShape3D_d34d6")
+
+[node name="Node3D" type="Node3D" parent="Player2"]
+
+[node name="Node3D2" type="Node3D" parent="Player2" instance=ExtResource("3_ooymn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+script = ExtResource("2_ydb7m")
+
+[node name="Node3D3" type="Node3D" parent="Player2"]
+
+[node name="Node3D4" type="Node3D" parent="Player2"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player2"]
+mesh = SubResource("CapsuleMesh_vnchp")
+
+[node name="Player5" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98693, 0, -4.62676)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player5"]
+shape = SubResource("CapsuleShape3D_d34d6")
+
+[node name="Node3D" type="Node3D" parent="Player5"]
+
+[node name="Node3D2" type="Node3D" parent="Player5" instance=ExtResource("3_ooymn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+script = ExtResource("2_ydb7m")
+
+[node name="Node3D3" type="Node3D" parent="Player5"]
+
+[node name="Node3D4" type="Node3D" parent="Player5"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player5"]
+mesh = SubResource("CapsuleMesh_vnchp")

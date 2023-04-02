@@ -17,15 +17,17 @@ func selectType(index : int):
 	if options == null:
 		printerr("options is null in ", name)
 		return
-	if nodes.size() == 0:
-		return
 	
 	for node in nodes:
 		match index:
 			0: # CharacterBody3D
 				print("Change ", node, " to CharacterBody3D -- ", index)
+				if !(node is CharacterBody3D):
+					Utils.changeType(node, CharacterBody3D.new())
 			1: # RigidBody3D
 				print("Change ", node, " to RigidBody3D -- ", index)
+				if !(node is RigidBody3D):
+					Utils.changeType(node, RigidBody3D.new())
 			_: # Cancel
 				print("Cancelled change type with: ", index)
 	
